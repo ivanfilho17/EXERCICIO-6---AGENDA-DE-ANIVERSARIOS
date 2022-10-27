@@ -1,0 +1,54 @@
+package br.ufpb;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class AgendaGUI extends JFrame {
+    JLabel linha1, linha2;
+    ImageIcon artAniversario = new ImageIcon("./src/main/java/br/ufpb/imgs/artAniversario.jpg ");
+    ImageIcon addImg  = new ImageIcon("./src/main/java/br/ufpb/imgs/adicionarImg.png");
+    ImageIcon pesqImg = new ImageIcon("./src/main/java/br/ufpb/imgs/pesquisarImg.png");
+    ImageIcon removeImg = new ImageIcon("./src/main/java/br/ufpb/imgs/removerImg.png");
+    JButton botaoAdicionar, botaoPesquisar, botaoRemover;
+    AgendaInterface agenda = new AgendaIvan();
+
+    public AgendaGUI() {
+        setTitle("Agenda de Aniversários");
+        setSize(700, 550);
+        setLocation(150, 150);
+        setResizable(false);
+        getContentPane().setBackground(Color.white);
+        linha1 = new JLabel("Minha Agenda de Aniversários", JLabel.CENTER);
+        linha1.setForeground(Color.red);
+        linha1.setFont(new Font("Arial", Font.BOLD, 22));
+        linha2 = new JLabel(artAniversario, JLabel.CENTER);
+        botaoAdicionar = new JButton("Adicionar", addImg);
+        botaoAdicionar.addActionListener(new AgendaAddController(agenda, this));
+        botaoPesquisar = new JButton("Pesquisar", pesqImg);
+        botaoPesquisar.addActionListener(new AgendaSearchController(agenda, this));
+        botaoRemover = new JButton("Remover", removeImg);
+        botaoRemover.addActionListener(new AgendaRemoveController(agenda, this));
+        
+        setLayout(new GridLayout(3, 2));
+        add(linha1);
+        add(botaoAdicionar);
+        add(linha2);
+        add(botaoPesquisar);
+        add(new JLabel());
+        add(botaoRemover);
+    }
+
+    public static void main(String[] args) {
+        JFrame janela = new AgendaGUI();
+        janela.setVisible(true);
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+    }
+
+}
