@@ -1,6 +1,8 @@
 package br.ufpb;
 
-public class Contato {
+import java.io.Serializable;
+
+public class Contato implements Serializable {
 
     private String nome;
     private int dia;
@@ -10,6 +12,16 @@ public class Contato {
         this.nome = nome;
         this.dia = dia;
         this.mes = mes;
+    }
+
+    public Contato(){
+        this("", 0, 0);
+    }
+
+    @Override
+    public String toString() {
+        return "Aniversariante [ Nome = " + this.nome + ", Dia do aniversário = " + this.dia + ", Mês do aniversário = "
+                + this.mes + " ]";
     }
 
     public String getNome() {

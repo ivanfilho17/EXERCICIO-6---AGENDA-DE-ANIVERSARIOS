@@ -3,6 +3,7 @@ package br.ufpb;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.io.File;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,12 +12,12 @@ import javax.swing.JLabel;
 
 public class AgendaGUI extends JFrame {
     JLabel linha1, linha2;
-    ImageIcon artAniversario = new ImageIcon("./src/main/java/br/ufpb/imgs/artAniversario.jpg ");
-    ImageIcon addImg  = new ImageIcon("./src/main/java/br/ufpb/imgs/adicionarImg.png");
-    ImageIcon pesqImg = new ImageIcon("./src/main/java/br/ufpb/imgs/pesquisarImg.png");
-    ImageIcon removeImg = new ImageIcon("./src/main/java/br/ufpb/imgs/removerImg.png");
+    ImageIcon artAniversario = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"artAniversario.jpg ");
+    ImageIcon addImg  = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"adicionarImg.png");
+    ImageIcon pesqImg = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"pesquisarImg.png");
+    ImageIcon removeImg = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"removerImg.png");
     JButton botaoAdicionar, botaoPesquisar, botaoRemover;
-    AgendaInterface agenda = new AgendaIvan();
+    AgendaInterface agenda = new MinhaAgenda();
 
     public AgendaGUI() {
         setTitle("Agenda de Aniversários");

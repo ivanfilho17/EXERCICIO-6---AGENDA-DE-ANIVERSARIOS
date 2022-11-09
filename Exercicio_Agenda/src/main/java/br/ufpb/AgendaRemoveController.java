@@ -1,7 +1,6 @@
 package br.ufpb;
 
 import java.awt.event.ActionEvent;
-import java.util.Collection;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;

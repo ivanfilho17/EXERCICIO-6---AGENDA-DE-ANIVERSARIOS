@@ -9,5 +9,6 @@ public interface AgendaInterface {
     public Collection<Contato> pesquisaAniversariantes(int dia, int mes);
 
     public boolean removeContato(String nome);
-}
 
+    public Collection<Contato> getContatos();
+}
