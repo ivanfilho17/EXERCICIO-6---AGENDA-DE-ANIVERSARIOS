@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 
 public class AgendaGUI extends JFrame {
     JLabel linha1, linha2;
-    ImageIcon artAniversario = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"artAniversario.jpg ");
+    ImageIcon artAniversario = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"aniversarioMemeImg.png ");
     ImageIcon addImg  = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"adicionarImg.png");
     ImageIcon pesqImg = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"pesquisarImg.png");
     ImageIcon removeImg = new ImageIcon("src"+File.separator+"main"+File.separator+"resources"+ File.separator+"imgs"+File.separator+"removerImg.png");
